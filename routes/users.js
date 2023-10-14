@@ -92,7 +92,7 @@ router.post("/",verifyToken, function (req, res) {
     }
 });
 
-router.put("/:id",validasiData, function (req, res) {
+router.put("/:id",verifyToken, function (req, res) {
     const { email, gender, password, role } = req.body;
     const movieId = req.params.id;
 
